@@ -4,80 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <title>verhaaltje.</title>
+    <link rel="stylesheet" href="style/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <header>
-        <a href='#spotlight'>Spring naar verhalen</a>
+        <a href='#spotlight' class='hidden'>Spring naar verhalen</a>
         <nav>
             <ul>
-                <li><a href="pages/overzicht.html">Home</a></li>
+                <li><a class='bold logo' href="pages/overzicht.html">Verhaaltje.</a></li>
                 <li><a href="pages/Mijn_verhalen.html">Mijn Verhalen</a></li>
                 <li><a href="pages/gelezen">Gelezen</a></li>
+                <li>
+                    <a href="registreren.html">Inloggen</a>
+                </li>
+                <li>
+                    <form>
+                        <input class="searchfield" id='search' type="search" name="zoeken" placeholder='Zoeken..'>
+                    </form>
+                </li>
             </ul>
-            <form>
-                <input type="search" name="zoeken">
-                <button>zoek</button>
-            </form>
-            <a href="account.html"><img src="kaas.jpg" alt="">Mijn account</a>
         </nav>
     </header>
-    <!-- /header -->
     <main>
-        <section id='intro'>
-            <h1>verhaaltje.</h1>
-            <p>Voor iedereen een leuk verhaal voor onderweg.</p>
-        </section>
-        <section id='verderlezen'>
-            <h2>Zombie</h2>
-            <h3>Molovich</h3>
-            <button>Lees verder</button>
-        </section>
-        <section id='spotlight'>
-            <h1>Populair / Nieuw</h1>
-            <div>
-                <a href="pages/verhalen/verhaal_33.html">
-                    <h2>Humor</h2>
-                    <h3>De verwarde man</h3>
-                </a>
-                <button>bewaren</button>
-            </div>
-            <div>
-                <a href="pages/verhalen/verhaal_34.html">
-                    <h2>Actie</h2>
-                    <h3>Rondo's</h3>
-                </a>
-                <button>bewaren</button>
-            </div>
-            <div>
-                <a href="pages/verhalen/verhaal_35.html">
-                    <h2>Romantiek</h2>
-                    <h3>Gesponsord</h3>
-                </a>
-                <button>bewaren</button>
-            </div>
+        <div class='contain_top'>
+            <section class='intro'>
+                <div class='transav_box'>
+                    <h1 class='header logo bold'>Verhaaltje.</h1>
+                    <p>Voor iedereen een leuk verhaal voor onderweg.</p>
+                </div>
+            </section>
+            <section class='verderlezen'>
+                <div>
+                    <h2>Zombie</h2>
+                    <h3>Molovich</h3>
+                    <button class='bold'>Lees verder</button>
+                </div>
+            </section>
+        </div>
+        <h1><span class = 'bold'>Populair</span> / Nieuw</h1>
+        <section class='field'>
+            <section class='spotlight'>
+                <div class='verhaal_item verhaal_item_first'>
+                    <a class='save' href="bewaren.html"><img src="images/noun_540607_cc.png" alt="bewaren"></a>
+                    <a href="pages/verhalen/verhaal_33.html">
+                        <h2>De verwarde man</h2>
+                        <h3>Humor</h3>
+                    </a>
+
+                </div>
+                <div class='verhaal_item'>
+                    <a class='save' href="bewaren.html"><img src="images/noun_540607_cc.png" alt="bewaren"></a>
+                    <a href="pages/verhalen/verhaal_34.html">
+                        <h2>Rondo's</h2>
+                        <h3>Actie</h3>
+                    </a>
+
+
+                </div>
+                <div class='verhaal_item'>
+                    <a class='save' href="bewaren.html"><img src="images/noun_540607_cc.png" alt="bewaren"></a>
+                    <a href="pages/verhalen/verhaal_35.html">
+                        <h2>Gesponsord</h2>
+                        <h3>Romantiek</h3>
+                    </a>
+
+                </div>
+                <div class='verhaal_item'>
+                    <a class='save' href="bewaren.html"><img src="images/noun_540607_cc.png" alt="bewaren"></a>
+                    <a href="pages/verhalen/verhaal_35.html">
+                        <h2>Verrassing</h2>
+                        <h3>Drama</h3>
+                    </a>
+
+                </div>
+            </section>
         </section>
     </main>
     <footer>
-        <section id='categorien'>
-            <h1>Categorien</h1>
-            <div>
-                <a href="pages/humor.html">Humor</a>
-            </div>
-            <div>
-                <a href="pages/drama.html">Drama</a>
-            </div>
-            <div>
-                <a href="pages/actie.html">Actie</a>
-            </div>
-            <div>
-                <a href="pages/romantiek.html">Romantiek</a>
-            </div>
-            <div>
-                <a href="pages/horror.html">Horror</a>
-            </div>
+<h1>Categorien</h1>
+        <section>
+            <a href="pages/humor.html"><h3>Humor</h3></a>
+            <a href="pages/drama.html"><h3>Drama</h3></a>
+            <a href="pages/actie.html"><h3>Actie</h3></a>
+            <a href="pages/romantiek.html"><h3>Romantiek</h3></a>
+            <a href="pages/horror.html"><h3>Horror</h3></a>
+            <a href="pages/reizen.html"><h3>Reizen</h3></a>
         </section>
     </footer>
+    <script src='script/main.js'></script>
 </body>
 
 </html>

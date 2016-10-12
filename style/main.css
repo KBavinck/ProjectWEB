@@ -1,0 +1,741 @@
+/*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* end reset */
+
+
+/* fonts */
+
+@font-face {
+    font-family: NexaLight;
+    src: url(../fonts/Nexa_Light.otf);
+}
+
+@font-face {
+    font-family: NexaBold;
+    src: url(../fonts/Nexa_Bold.otf);
+}
+
+
+/* GLOBAL */
+
+body {
+    font-family: 'NexaLight';
+    box-sizing: border-box;
+}
+
+.bold {
+    font-family: 'NexaBold';
+}
+
+.logo {
+    font-size: 1.4em;
+    color: #00d66c;
+}
+
+.hidden {
+    position: absolute;
+    margin-left: -999em;
+    visibility: hidden;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.grayOut {
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 1em 0 1em 1em;
+    box-shadow: 0 .3125em .625em 0 rgba(0, 0, 0, .15);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    width: 10em;
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    color: #00d66c;
+    border-bottom: 2px solid #00d66c;
+}
+
+a {
+    text-decoration: none;
+    color: #2800a0;
+}
+
+.searchfield {
+    width: 180px;
+    height: 2em;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-size: 0.7em;
+    font-family: 'NexaLight';
+    border: .0625rem solid #91a3b7;
+}
+
+.hoverColor {
+    border-color: #2800a0;
+}
+
+.hoverColor::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: lightgray;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: lightgray;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: lightgray;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: lightgray;
+}
+
+
+/* MAIN */
+
+
+/* INTRO */
+
+.contain_top {
+    width: 100vw;
+    display: flex;
+    height: 20em;
+}
+
+.intro {
+    width: 60vw;
+    padding: 4em 0 0 4em;
+    display: flex;
+    background: url(../images/venice.jpg);
+}
+
+.intro p {
+    margin-top: 1em;
+}
+
+.intro h1 {
+    text-align: left;
+}
+
+.transav_box {
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 30vw;
+    height: 4.5em;
+    border-radius: 15px;
+    padding: 1em 1em 1em 3em;
+}
+
+
+/* VERDERLEZEN */
+
+.verderlezen {
+    width: 40vw;
+    background: url(../images/horror.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-top: 10em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+button,
+.button {
+    padding: .4375em 1.5em .5625em;
+    border: 0;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.5;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 1.25em;
+    width: 12em;
+    margin-top: 0.5em;
+    max-height: 2.5rem;
+    max-width: 9rem;
+    background-color: #ff3268;
+    color: white;
+    box-shadow: inset 0 -.1875em .0625em #ca2b55;
+}
+
+button:hover,
+.save:hover {
+    background-color: #ff658e;
+}
+
+.verderlezen h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #00d66c;
+}
+
+
+/* AANBEVOLEN */
+
+
+/* containers */
+
+.field {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    text-align: center;
+}
+
+.spotlight {
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.verhaal_item {
+    width: 12rem;
+    height: 15rem;
+    min-width: 100px;
+    margin-right: 10px;
+    margin-bottom: 1em;
+    -webkit-box-shadow: 3px 3px 9px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 9px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 9px 0 rgba(0, 0, 0, 0.75);
+}
+
+.spotlight div {
+    border-radius: 15px;
+}
+
+.spotlight div:nth-child(1) {
+    background: url(../images/man.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.spotlight div:nth-child(2) {
+    background: url(../images/rondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.spotlight div:nth-child(3) {
+    background: url(../images/romance.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.spotlight div:nth-child(4) {
+    background: url(../images/firework.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* content */
+
+a h2 {
+    background-color: white;
+    padding: 1em;
+    color: #2800a0;
+    width: 7em;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.field section div a h3 {
+    background-color: #2800a0;
+    padding: 1em;
+    color: white;
+    width: 5em;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.save {
+    margin-left: 8rem;
+    background-color: #ff3268;
+    border-radius: 50%;
+    padding: 0.4rem;
+    color: white;
+    /*        box-shadow: inset 0 -.1875em .0625em #ca2b55;*/
+}
+
+img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+
+/* FOOTER */
+
+footer section {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+footer section a {
+    width: calc(100vw / 6);
+    height: calc(100vw / 6);
+    font-size: 1.4em;
+    color: white;
+    font-family: 'NexaLight';
+    box-sizing: border-box;
+    text-align: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+footer section a:nth-child(1) {
+    background-image: url(../images/humor.jpg);
+}
+
+footer section a:nth-child(2) {
+    background-image: url(../images/brasil.jpg);
+}
+
+footer section a:nth-child(3) {
+    background-image: url(../images/diving.jpg);
+}
+
+footer section a:nth-child(4) {
+    background-image: url(../images/beach.jpg);
+}
+
+footer section a:nth-child(5) {
+    background-image: url(../images/scary.jpg);
+}
+
+footer section a:nth-child(6) {
+    background-image: url(../images/spain.jpg);
+}
+
+@media (min-width: 600px) {
+    footer section a h3 {
+        background-color: #2800a0;
+        margin: auto;
+        padding: 0.7em;
+        width: 5em;
+        color: white;
+        border-radius: 15px;
+        align-self: baseline;
+        /*        margin: 0 auto;*/
+    }
+}
+
+
+/* REGISTREREN */
+
+.register {
+    background: url(../images/photo-1459788167356-fc73bf1e7abb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register form {
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+}
+
+.register form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
+}
+
+legend {
+    color: #00d66c;
+    margin-bottom: 1em;
+}
+
+.textfield {
+    width: 260px;
+    height: 2em;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-size: 0.7em;
+    font-family: 'NexaLight';
+    border: .0625rem solid #91a3b7;
+    margin-bottom: 1em;
+}
+
+legend,
+fieldset label,
+fieldset input {
+    margin-left: 2em;
+}
+
+.textfield:hover {
+    border-color: #2800a0;
+}
+
+.register form fieldset label {
+    margin-bottom: 0.7em;
+}
+
+.register h1 {
+    margin: 0;
+    padding-top: 1em;
+}
+
+.register section {
+    background-color: white;
+    width: 30vw;
+    margin-top: 1em;
+    border-radius: 1em;
+}
+
+.register a {
+    padding-left: 200px;
+    margin-bottom: 1em;
+}
+
+.badInfo {
+    color: red;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    text-align: center;
+}
+
+.invalid {
+    border-color: rgba(255, 0, 0, 0.41);
+}
+
+label,
+input {
+    transition: opacity 1s;
+}
+
+.lowVisibility {
+    opacity: 0.3;
+}
+
+
+/* SOCIAL */
+
+
+/* source: https://codepen.io/aklatzke/pen/JwcCx */
+
+div.social-wrap {
+    margin-top: 2em;
+}
+
+div.social-wrap button {
+    padding-right: 45px;
+    height: 35px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 14px;
+    width: 25vw;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+    margin: 0 auto;
+}
+
+button#facebook {
+    border-color: #2d5073;
+    background-color: #3b5998;
+    background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
+    max-width: none;
+    margin-bottom: 15px;
+}
+
+button#googleplus {
+    border-color: #111;
+    background-color: #222;
+    background-image: url(../images/google-plus-128.png);
+    max-width: none;
+    margin-bottom: 15px;
+}
+
+button#hebAl {
+    border-color: #ff658e;
+    background-color: #ff3268;
+    max-width: none;
+    margin-bottom: 15px;
+}
+
+
+/* MEDIA */
+
+@media (max-width: 1100px) {
+    li {
+        padding: 0.4em;
+    }
+    .intro {
+        display: none;
+    }
+    .verderlezen {
+        width: 100vw;
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 1250px) {
+    .verhaal_item {
+        margin-bottom: 3em;
+    }
+    footer section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    footer section a {
+        padding: 0;
+        /*        padding-top: calc(25vw - 0.7em);*/
+        width: 100vw;
+        height: 20vw;
+        -webkit-box-shadow: inset 400px 200px 5px 200px rgba(0, 0, 0, 0.58);
+        -moz-box-shadow: inset 400px 200px 5px 200px rgba(0, 0, 0, 0.58);
+        box-shadow: inset 400px 200px 5px 200px rgba(0, 0, 0, 0.58);
+        background-size: cover;
+        background-position: center;
+    }
+    footer section a h3 {
+        /*        margin-top: calc(80% - 1.5em);*/
+    }
+    div.social-wrap button {
+        width: 60vw;
+    }
+    .register section {
+        background-color: white;
+        width: 75vw;
+        height: 85vh;
+        margin-top: 1em;
+        border-radius: 1em;
+    }
+    .register form fieldset {
+        width: 70vw;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 450px) {
+    .verhaal_item {
+        margin-bottom: 1em;
+    }
+    footer section a {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: calc(5em - 0.7em);
+        width: 100vw;
+        height: 10em;
+        -webkit-box-shadow: inset 200px 200px 5px 200px rgba(0, 0, 0, 0.58);
+        -moz-box-shadow: inset 200px 200px 5px 200px rgba(0, 0, 0, 0.58);
+        box-shadow: inset 200px 200px 5px 200px rgba(0, 0, 0, 0.58);
+        background-size: cover;
+    }
+    div.social-wrap button {
+        width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .register {
+        background: none;
+    }
+    .register section {
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 1em;
+        border-radius: 1em;
+    }
+}
